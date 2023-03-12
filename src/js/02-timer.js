@@ -1,7 +1,8 @@
-// Описаний в документації
+// Бібліотека для кросбраузерного вибору кінцевої дати і часу в одному елементі інтерфейсу
 import flatpickr from 'flatpickr';
-// Додатковий імпорт стилів
 import 'flatpickr/dist/flatpickr.min.css';
+// Бібліотека для відображення повідомлень користувачеві
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 // Посилання на елементи
 const inputEl = document.querySelector('#datetime-picker');
@@ -30,7 +31,7 @@ const options = {
     if (deadline > options.defaultDate.getTime()) {
       startBtn.disabled = false;
     } else {
-      alert('Please choose a date in the future');
+      Notify.failure('Please choose a date in the future');
       startBtn.disabled = true;
     }
   },
