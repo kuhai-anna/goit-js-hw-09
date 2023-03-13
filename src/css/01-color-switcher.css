@@ -8,8 +8,12 @@ button[data-stop] {
 
 button[data-start],
 button[data-stop] {
-  height: 22px;
+  height: 30px;
   width: 70px;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(47, 47, 47);
 
   border: 1px solid;
   border-color: transparent;
@@ -23,6 +27,7 @@ button[data-stop] {
 button[data-start]:disabled,
 button[data-stop]:disabled {
   background-color: rgb(201, 201, 213);
+  color: rgb(123, 122, 122);
 }
 
 button[data-start]:enabled:hover,
