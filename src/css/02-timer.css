@@ -1,3 +1,50 @@
+input[type='text'] {
+  padding-left: 5px;
+  height: 30px;
+  width: 190px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(47, 47, 47);
+
+  background-color: rgb(238, 238, 252);
+  border: 1px solid;
+  border-color: rgb(106, 106, 183);
+  border-radius: 2px;
+}
+
+button[data-start] {
+  height: 30px;
+  width: 70px;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(47, 47, 47);
+
+  background-color: rgb(186, 186, 250);
+  border: 1px solid;
+  border-color: rgb(106, 106, 183);
+  border-radius: 2px;
+
+  transition-property: background-color, border-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button[data-start]:disabled {
+  background-color: rgb(201, 201, 213);
+  border-color: transparent;
+  color: rgb(123, 122, 122);
+}
+
+button[data-start]:enabled:hover,
+button[data-start]:enabled:focus {
+  background-color: rgb(69, 69, 148);
+  border-color: transparent;
+
+  color: rgb(255, 255, 255);
+}
+
 .timer {
   display: flex;
   gap: 20px;
@@ -18,34 +65,4 @@
 
 .label {
   font-weight: 500;
-}
-
-button[data-start] {
-  height: 22px;
-  width: 70px;
-
-  background-color: rgb(186, 186, 250);
-  border: 1px solid;
-  border-color: rgb(106, 106, 183);
-  border-radius: 2px;
-
-  color: rgb(15, 15, 15);
-
-  transition-property: background-color, border-color, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-button[data-start]:disabled {
-  background-color: rgb(201, 201, 213);
-  border-color: transparent;
-  color: rgb(118, 118, 118);
-}
-
-button[data-start]:enabled:hover,
-button[data-start]:enabled:focus {
-  background-color: rgb(69, 69, 148);
-  border-color: transparent;
-
-  color: rgb(255, 255, 255);
 }
