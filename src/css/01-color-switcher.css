@@ -9,6 +9,8 @@ button[data-stop] {
 button[data-start],
 button[data-stop] {
   height: 22px;
+  width: 70px;
+
   border: 1px solid;
   border-color: transparent;
   border-radius: 2px;
