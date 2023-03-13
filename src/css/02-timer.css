@@ -22,6 +22,8 @@
 
 button[data-start] {
   height: 22px;
+  width: 70px;
+
   background-color: rgb(186, 186, 250);
   border: 1px solid;
   border-color: rgb(106, 106, 183);
