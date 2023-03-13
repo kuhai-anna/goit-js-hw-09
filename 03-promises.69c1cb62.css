@@ -1,0 +1,2 @@
+.form{align-items:end;gap:10px;display:flex}label{font-weight:500}.form-input{display:block}button[type=submit]{height:22px;color:#0f0f0f;background-color:#babafa;border:1px solid #6a6ab7;border-radius:2px;transition-property:background-color,border-color,color;transition-duration:.25s;transition-timing-function:cubic-bezier(.4,0,.2,1)}button[type=submit]:hover,button[type=submit]:focus{color:#fff;background-color:#454594;border-color:rgba(0,0,0,0)}
+/*# sourceMappingURL=03-promises.69c1cb62.css.map */
