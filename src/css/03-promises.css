@@ -7,3 +7,25 @@
 .form-input {
   display: block;
 }
+
+button[type='submit'] {
+  height: 22px;
+  background-color: rgb(186, 186, 250);
+  border: 1px solid;
+  border-color: rgb(106, 106, 183);
+  border-radius: 2px;
+
+  color: rgb(15, 15, 15);
+
+  transition-property: background-color, border-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button[type='submit']:hover,
+button[type='submit']:focus {
+  background-color: rgb(69, 69, 148);
+  border-color: transparent;
+
+  color: rgb(255, 255, 255);
+}
