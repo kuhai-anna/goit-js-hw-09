@@ -1,0 +1,36 @@
+button[data-start] {
+  background-color: rgb(142, 215, 189);
+}
+
+button[data-stop] {
+  background-color: rgb(241, 191, 208);
+}
+
+button[data-start],
+button[data-stop] {
+  height: 22px;
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 2px;
+
+  transition-property: background-color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button[data-start]:disabled,
+button[data-stop]:disabled {
+  background-color: rgb(201, 201, 213);
+}
+
+button[data-start]:enabled:hover,
+button[data-start]:enabled:focus {
+  background-color: rgb(61, 208, 154);
+  border-color: rgb(29, 134, 96);
+}
+
+button[data-stop]:enabled:hover,
+button[data-stop]:enabled:focus {
+  background-color: rgb(225, 149, 175);
+  border-color: rgb(171, 91, 119);
+}
