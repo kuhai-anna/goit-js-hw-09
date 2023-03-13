@@ -10,16 +10,32 @@ label {
 
 .form-input {
   display: block;
+  padding-left: 5px;
+  height: 30px;
+  width: 200px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(47, 47, 47);
+
+  background-color: rgb(238, 238, 252);
+  border: 1px solid;
+  border-color: rgb(106, 106, 183);
+  border-radius: 2px;
 }
 
 button[type='submit'] {
-  height: 22px;
+  height: 30px;
+  width: 150px;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(47, 47, 47);
+
   background-color: rgb(186, 186, 250);
   border: 1px solid;
   border-color: rgb(106, 106, 183);
   border-radius: 2px;
-
-  color: rgb(15, 15, 15);
 
   transition-property: background-color, border-color, color;
   transition-duration: 250ms;
