@@ -6,11 +6,9 @@ const formEl = document.querySelector('.form');
 const delayInput = document.querySelector('[name="delay"]');
 const stepInput = document.querySelector('[name="step"]');
 const amountInput = document.querySelector('[name="amount"]');
-const submitBtn = document.querySelector('[type="submit"]');
 
 // Слухач подій
-// submitBtn.addEventListener('submit', onSubmitBtnClick);
-submitBtn.addEventListener('click', onSubmitBtnClick);
+formEl.addEventListener('submit', onSubmitBtnClick);
 
 // Запуск createPromise по кліку
 function onSubmitBtnClick(e) {
