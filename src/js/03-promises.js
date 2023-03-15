@@ -27,9 +27,7 @@ function onSubmitBtnClick(e) {
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       })
-      .finally(() => {
-        formEl.reset();
-      }); // Очищення форми
+      .finally(() => formEl.reset()); // Очищення форми
   }
 }
 
