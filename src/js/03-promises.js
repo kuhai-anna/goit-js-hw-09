@@ -1,11 +1,8 @@
 // Бібліотека для відображення повідомлень користувачеві
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-// Посилання на елементи
+// Посилання на форму
 const formEl = document.querySelector('.form');
-const delayInput = document.querySelector('[name="delay"]');
-const stepInput = document.querySelector('[name="step"]');
-const amountInput = document.querySelector('[name="amount"]');
 
 // Слухач подій
 formEl.addEventListener('submit', onSubmitBtnClick);
@@ -14,20 +11,26 @@ formEl.addEventListener('submit', onSubmitBtnClick);
 function onSubmitBtnClick(e) {
   e.preventDefault(); // Заборона перезавантаження сторінки
 
-  for (let i = 0; i < amountInput.value; i += 1) {
-    const position = i + 1;
-    const delay = Number(delayInput.value) + i * Number(stepInput.value);
+  const form = e.currentTarget;
+  const amount = form.elements.amount.value;
+  const delay = Number(form.elements.delay.value);
+  const step = Number(form.elements.step.value);
 
-    createPromise(position, delay)
+  for (let i = 0; i < amount; i += 1) {
+    const position = i + 1;
+    const newDelay = delay + i * step;
+
+    createPromise(position, newDelay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
-      });
+      })
+      .finally(() => {
+        formEl.reset();
+      }); // Очищення форми
   }
-
-  formEl.reset(); // Очищення форми
 }
 
 // Функція, що створює Promise
